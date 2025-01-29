@@ -1,0 +1,32 @@
+# Processes
+exec-once = pnpm self-update &
+
+# Base
+exec-once = hyprpaper
+exec-once = waybar &
+# ??? exec-once = eww # TODO: Replace waybar
+exec-once = fcitx5 -d &
+exec-once = udiskie
+exec-once = swaync &
+exec-once = /usr/libexec/policykit-1-pantheon/io.elementary.desktop.agent-polkit &
+exec-once = kwalletd6 &
+exec-once = nwg-look -a
+exec-once = hyprctl dispatch exec '[float] $terminal -e fish -c "up"'
+exec-once = kdeconnectd &
+exec-once = wl-paste --type text --watch cliphist store
+exec-once = wl-paste --type image --watch cliphist store
+bind = SUPER, V, exec, cliphist list | fuzzel --dmenu | cliphist decode | wl-copy
+
+# Programs
+exec-once = flatpak run md.obsidian.Obsidian &
+exec-once = flatpak run org.ferdium.Ferdium --enable-wayland-ime &
+exec-once = $browser &
+
+# Slow app launch fix (by CachyOS)
+exec-once = systemctl --user import-environment &
+exec-once = hash dbus-update-activation-environment 2>/dev/null &
+exec-once = dbus-update-activation-environment --systemd &
+
+# Cursor fix
+exec-once = hyprctl setcursor $cursor $cursorSize
+

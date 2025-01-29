@@ -1,0 +1,25 @@
+; FIXME: deflisten rework
+(defpoll network_info
+  :interval "30s"
+  :initial '{ "connected": "n", "ethernet": "n", "netName": "", "interface": "", "ipv4": "" }'
+  `scripts/network_data.sh`
+)
+
+(defwidget network []
+  (tooltip
+    (box
+      :class "bold"
+      :orientation "v"
+      :spacing 4
+      "IPv4: ${network_info.ipv4}"
+      "  ${EWW_NET[network_info.interface]?.NET_UP ?: "-"}" 
+      "  ${EWW_NET[network_info.interface]?.NET_DOWN ?: "-"}" 
+    )
+    (button
+      :onclick "hyprctl -q dispatch exec '[float] alacritty -e nmtui'"
+      :class {network_info.connected == "n" ? "bold b-sec" : "bolder bg-sec"}
+      `${network_info.connected == "n" ? "󱚵" : network_info.ethernet == "y" ? " " : " "}${network_info.netName != "" ? "  ${network_info.netName}" : ""}` 
+    )
+  )
+
+)

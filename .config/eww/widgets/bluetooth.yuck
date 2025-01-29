@@ -1,0 +1,19 @@
+; FIXME: Monitor instead of defpoll
+;(deflisten count_bt_devices
+;  :initial 0
+;  `watch -t -C -r -w -n 1 "bluetoothctl devices Connected | wc -l"`
+;)
+;
+(defpoll count_bt_devices
+  :interval "30s"
+  :initial 0 
+  `bluetoothctl devices Connected | wc -l`
+)
+
+(defwidget bluetooth []
+  (button
+    :onclick "blueman-manager &"
+    :class "bolder bg-info"
+    " ${count_bt_devices}"
+  )
+)

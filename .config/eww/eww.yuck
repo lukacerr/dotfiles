@@ -1,0 +1,16 @@
+; WIDGETS
+(include "widgets/clock.yuck")
+(include "widgets/date.yuck")
+(include "widgets/tray.yuck")
+(include "widgets/bluetooth.yuck")
+(include "widgets/network.yuck")
+(include "widgets/audio.yuck")
+(include "widgets/battery.yuck")
+(include "widgets/active_app.yuck")
+(include "widgets/notifications.yuck")
+(include "widgets/weather.yuck")
+
+; WINDOWS
+(include "windows/h_status_bar.yuck")
+(include "windows/h_status_bar2.yuck")
+(include "windows/v_status_bar.yuck")

@@ -1,0 +1,267 @@
+[
+  // TOP BAR
+  {
+    "layer": "top",
+    "position": "top",
+    
+    "modules-left": ["hyprland/workspaces", "hyprland/submap", "custom/media"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": [
+		"network", 
+		"bluetooth", 
+		"upower#keychron", 
+		"upower#logitech",
+		"wireplumber"
+	],
+
+    "upower#keychron": {
+		"native-path": "hid-dc:2c:26:32:de:0a-battery",
+		"format": "󰌌    {percentage}",
+		"show-icon": false,
+		"tooltip": false,
+	},
+    "upower#logitech": {
+		"native-path": "hidpp_battery_0",
+		"format": "󰍽    {percentage}",
+		"show-icon": false,
+		"tooltip": false,
+		"on-click": "piper &",
+	},
+
+    "hyprland/workspaces": {
+      "all-outputs": true,
+      "format": "{icon}",
+      "format-icons": {
+        "1": "一",
+        "2": "二",
+        "3": "三",
+        "4": "四",
+        "5": "五",
+        "6": "六",
+        "7": "七",
+        "8": "八",
+        "9": "九",
+        "10": "十"
+      },
+      "on-scroll-up": "hyprctl dispatch workspace e+1 1>/dev/null",
+      "on-scroll-down": "hyprctl dispatch workspace e-1 1>/dev/null",
+      "sort-by-number": true,
+      "active-only": false
+    },
+
+    "hyprland/submap": {
+      "format": "    {}",
+      "max-length": 12,
+      "tooltip": false
+    },
+
+    "custom/media": {
+      "format": "{0}",
+      "return-type": "json",
+      "max-length": 40,
+      "format-icons": {
+        "spotify": "",
+        "default": "🎜"
+      },
+      "escape": true,
+      "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+    },
+
+    "hyprland/window": {
+      "max-length": 100,
+      "separate-outputs": true
+    },
+
+    "network": {
+      "format-wifi": " {essid} ({signalStrength}%)",
+      "format-linked": "{ifname} (No IP)",
+      "format": "",
+      "format-disconnected": "",
+      "format-ethernet": "󰈀    {ifname}  <span color=\"darkgray\">({ipaddr})</span>",
+	  "on-click": "hyprctl dispatch exec '[float] alacritty -e nmtui'",	      
+      "tooltip-format": " {bandwidthUpBits}  {bandwidthDownBits}\n{ifname}\n{ipaddr}/{cidr}\n",
+      "tooltip-format-wifi": " {essid} {frequency}MHz\nStrength: {signaldBm}dBm ({signalStrength}%)\nIP: {ipaddr}/{cidr}\n {bandwidthUpBits}  {bandwidthDownBits}",
+      "interval": 10
+    },
+
+    "bluetooth": {
+      "format": " {status}",
+      "format-connected": "  {device_alias}",
+      "format-connected-battery": "    {device_alias} {device_battery_percentage}%",
+      // "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
+      "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+      "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+      "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+      "on-click": "hyprctl dispatch exec '[float] blueman-manager'"
+    },
+
+    "wireplumber": {
+      "on-click": "hyprctl dispatch exec '[float] pavucontrol'",
+      "format": "<span foreground='#FFCC95'>{icon}</span>    {volume}%",
+      "format-muted": " ",
+      "format-source": "",
+      "format-source-muted": "",
+      "format-icons": {
+        "headphone": " ",
+        "hands-free": " ",
+        "headset": " ",
+        "phone": " ",
+        "portable": " ",
+        "car": " ",
+        "default": [" ", " ", " "]
+      }
+    }
+  },
+
+  // BOTTOM BAR
+  {
+    "layer": "bottom",
+    "position": "bottom",
+
+    "modules-left": ["cpu", "memory", "disk", "systemd-failed-units"],
+    "modules-center": ["clock#time", "clock#date", "custom/weather"],
+    "modules-right": ["user", "idle_inhibitor", "custom/notifications", "tray", "custom/menu", "custom/power"],
+
+    "cpu": {
+      "interval": 30,
+      "format": "<span weight='900'></span>    {max_frequency} GHz  <span color='darkgray'>({usage}%)</span>",
+      "on-click": "alacritty -e btop"
+    },
+
+    "memory": {
+      "interval": 30,
+      "format": "<span weight='900'></span>    {used:0.2f} GiB  <span color='darkgray'>({percentage}%)</span>",
+      "on-click": "alacritty -e btop"
+    },
+
+    "disk": {
+      "unit": "GB",
+      "format": "<span weight='900'></span>    {specific_used:0.2f} GB  <span color=\"darkgray\">({percentage_used}%)</span>",
+      "tooltip-format": "{specific_free:0.2f} GB free ({percentage_free}%)",
+      "on-click": "alacritty -e gdu / -c --si"
+    },
+
+    "systemd-failed-units": {
+      "hide-on-ok": true,
+      "format": "✗ {nr_failed}",
+      "format-ok": "✓",
+      "system": true,
+      "user": true
+	},
+
+    "user": {
+      "format": "{user} (up {work_H}:{work_M} minutes ↑)",
+      "icon": true
+    },
+
+	"clock#time": {
+		"interval": 1,
+        "format": "<span color=\"#BCAAFE\" font-weight=\"900\"></span>    {:%H:%M:%S  <span color='darkgray' size='8pt'>(%Z)}</span>",
+		
+	    "tooltip-format": "{tz_list}",
+		
+        "timezones": [
+			"",
+			"Etc/UTC"
+		]
+	},
+	
+	"clock#date": {
+		"format": "<span color=\"#BCAAFE\" font-weight=\"900\"></span>    {:%m / %d}",
+        "tooltip-format": "<span size='9pt' font='JetBrainsMono NL Nerd Font'>{calendar}</span>",
+		"calendar": {
+			"mode": "day",
+			"mode-mon-col": 3,
+			"weeks-pos": "right",
+			"on-scroll": 1,
+			"format": {
+				"months":     "<span color='#BCAAFE' letter_spacing='3072' font='Noto Sans CJK JP' weight='600'>{}</span>",
+				"days":       "<span color='#E6E6E6' weight='600'>{}</span>",
+                "weeks":      "<span color='#FFCC95'><b>W{}</b></span>",
+				"weekdays":   "<span color='#19F9D8' letter_spacing='2876' font='Noto Sans CJK JP'><b> 日 月 火 水 木 金 土</b></span>",
+				"today":      "<span color='#FF9AC1' weight='900'>{}</span>"
+			}
+        },
+        "actions": {
+			"on-click-right": "mode",
+			"on-scroll-up": "tz_up",
+			"on-scroll-down": "tz_down",
+			"on-scroll-up": "shift_up",
+			"on-scroll-down": "shift_down"
+		}
+    },
+
+    "custom/weather": {
+      "format": "{}",
+      "format-alt": "{alt}: {}",
+      "format-alt-click": "click-right",
+      "interval": 3600,
+      "exec": "curl -s 'https://wttr.in/?format=1'",
+      //"return-type": "json",
+      //"exec": "~/.config/waybar/modules/weather.sh",
+      "exec-if": "ping wttr.in -c1"
+    },
+
+    "custom/menu": {
+      "format": "󰍜",
+      "tooltip": false,
+      "on-click": "fuzzel"
+    },    
+
+	"custom/power": {
+      "format": "󰚥",
+      "tooltip": false,
+      "on-click": "nwg-bar"
+    },
+
+    "idle_inhibitor": {
+      "format": "{icon} ",
+      "format-icons": {
+        "activated": "",
+        "deactivated": ""
+      },
+      "tooltip": "true"
+    },
+
+    "tray": {
+      "show-passive-items": true,
+      "icon-size": 15,
+      "spacing": 8
+    },
+
+	/* MAKO VER
+	"custom/notifications": {
+		"exec": "makoctl history | jq '.data[]' | jq length",
+		"interval": 5,
+		"on-click": "hyprctl dispatch exec '[float] alacritty -e ~/.config/waybar/modules/mako.sh'",
+		"on-click-middle": "pkill mako && mako",
+		"on-click-right": "makoctl restore",
+		"format": "{}  <span color='#FFB86C'></span>"
+	}
+	*/
+
+	"custom/notifications": {
+		"tooltip": false,
+		"format": "{icon}",
+		"format-icons": {
+			"notification": "<span foreground='red'><sup></sup></span>",
+			"none": "",
+			"dnd-notification": "<span foreground='red'><sup></sup></span>",
+			"dnd-none": "",
+			"inhibited-notification": "<span foreground='red'><sup></sup></span>",
+			"inhibited-none": "",
+			"dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+			"dnd-inhibited-none": ""
+		},
+		"return-type": "json",
+		"exec-if": "which swaync-client",
+		"exec": "swaync-client -swb",
+		"on-click": "swaync-client -t -sw",
+		"on-click-right": "swaync-client -d -sw",
+		"escape": true
+	},
+
+  }
+  // END
+]

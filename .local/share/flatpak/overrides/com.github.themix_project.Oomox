@@ -1,0 +1,4 @@
+[Context]
+devices=dri
+filesystems=home;host-os;host
+persistent=inkscape

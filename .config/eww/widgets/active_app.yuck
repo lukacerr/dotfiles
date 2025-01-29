@@ -1,0 +1,13 @@
+(deflisten active_title
+  :initial "-"
+  `scripts/active_window/target/release/active_window`
+)
+
+(defwidget active_app []
+  (label
+    :style "font-size: small"
+    :class "buttonize bg-b-dark"
+    :tooltip active_title
+    :text {strlength(active_title) > 50 ? "${substring(active_title,0,50)}..." : active_title}
+  )
+)

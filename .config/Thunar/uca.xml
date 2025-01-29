@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<submenu></submenu>
+	<unique-id>1736563353752611-1</unique-id>
+	<command>alacritty </command>
+	<description>Example for a custom action</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>vscode</icon>
+	<name>Open in VSCode</name>
+	<submenu></submenu>
+	<unique-id>1736719481110312-1</unique-id>
+	<command>fish -c &quot;code %f&quot;</command>
+	<description>Open Visual Studio Code in this folder</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+	<other-files/>
+	<text-files/>
+</action>
+<action>
+	<icon>accessories-text-editor</icon>
+	<name>Edit in Nano</name>
+	<submenu></submenu>
+	<unique-id>1736719679758568-2</unique-id>
+	<command>alacritty -e nano %f</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<other-files/>
+	<text-files/>
+</action>
+</actions>

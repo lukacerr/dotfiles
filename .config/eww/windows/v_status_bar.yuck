@@ -1,0 +1,50 @@
+; TODO: hypridle inhibit/activate toggle
+
+(defwindow v_status_bar
+  :monitor "DP-3"
+  :stacking "fg"
+  :exclusive true
+  :geometry (geometry
+    :x 0 :y 0
+    :anchor "left center"
+    :width "2.5%"
+    :height "100%"
+  )
+
+  (centerbox
+    :style "margin: 1em 0.375em; padding: 1em 0.25em"
+    :orientation "v"
+
+    ; Top
+    (box
+      :orientation "v"
+      :valign "start"
+      :space-evenly false
+      :spacing 8
+      ; TODO: PC stats
+    )
+
+    ; Center
+    (box
+      :orientation "v"
+      :valign "center"
+      :space-evenly false
+      :spacing 8
+      ; (date)
+      ; (clock)
+    )
+
+    ; Bottom
+    (box
+      :orientation "v"
+      :valign "end"
+      :space-evenly false
+      :spacing 8
+      ; (tray)
+      ; (notifications)
+      ;(button :onclick "fuzzel &" :tooltip "Fuzzel" "󰀻")
+      ;(button :onclick "nwg-bar &" :tooltip "Manage session" "⏻")
+      ;(button :onclick "hyprlock &" :tooltip "Lock" "󰌾")
+    )
+  )
+)

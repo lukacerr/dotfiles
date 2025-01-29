@@ -1,0 +1,67 @@
+# Rose Pine
+# Theme create by: https://github.com/pearcidar
+# Update by(sort by time):
+# 
+# Thanks for all contributor!!
+
+# If you want to make border display just set it same as sidebar background color
+
+# Code syntax highlight theme (you can go to https://github.com/alecthomas/chroma/blob/master/styles to find one you like)
+code_syntax_highlight = "nord"
+
+# ========= Border =========
+file_panel_border = "#141515"
+sidebar_border = "#141515"
+footer_border = "#141515"
+
+# ========= Border Active =========
+file_panel_border_active = "#B084EB"
+sidebar_border_active = "#19F9D8"
+footer_border_active = "#FFB86C"
+modal_border_active = "#CDCDCD"
+
+# ========= Background (bg) =========
+full_screen_bg = "#141515"
+file_panel_bg = "#141515"
+sidebar_bg = "#141515"
+footer_bg = "#141515"
+modal_bg = "#141515"
+
+# ========= Foreground (fg) =========
+full_screen_fg = "#CDCDCD"
+file_panel_fg = "#CDCDCD"
+sidebar_fg = "#CDCDCD"
+footer_fg = "#CDCDCD"
+modal_fg = "#CDCDCD"
+
+# ========= Special Color =========
+cursor = "#19F9D8"
+correct = "#19F9D8"
+error = "#FF2C6D"
+hint = "#45A9F9"
+cancel = "#757575"
+# Gradient color can only have two color!
+gradient_color = ["#19F9D8", "#FFB86C"]
+
+# ========= File Panel Special Items =========
+file_panel_top_directory_icon = "#45A9F9"
+file_panel_top_path = "#FFB86C"
+file_panel_item_selected_fg = "#B084EB"
+file_panel_item_selected_bg = "#141515"
+
+# ========= Sidebar Special Items =========
+sidebar_title = "#6FC1FF"
+sidebar_item_selected_fg = "#FFCC95"
+sidebar_item_selected_bg = "#141515"
+sidebar_divider = "#868686"
+
+# ========= Modal Special Items =========
+modal_cancel_fg = "#CDCDCD"
+modal_cancel_bg = "#757575"
+
+modal_confirm_fg = "#CDCDCD"
+modal_confirm_bg = "#FF2C6D"
+
+# ========= Help Menu =========
+help_menu_hotkey = "#FFB86C"
+help_menu_title = "#19F9D8"

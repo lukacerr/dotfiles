@@ -1,0 +1,24 @@
+window {
+	background-color: rgba (0, 0, 0, 1.0);
+	border: 4px solid #FF9AC1;
+	border-radius: 8px;
+}
+
+/* Outer bar container, takes all the window width/height */
+#outer-box {
+	margin: 0px;
+}
+
+/* Inner bar container, surrounds buttons */
+#inner-box {
+	background-color: rgba(255,255,255,0.02);
+	border-radius: 1em;
+	padding: 4px;
+	margin: 6px;
+}
+
+button {
+	padding-left: 12px;
+	padding-right: 12px;
+	margin: 6px;
+}
