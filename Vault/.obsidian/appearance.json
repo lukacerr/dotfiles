@@ -1,0 +1,8 @@
+{
+  "cssTheme": "Border",
+  "baseFontSize": 16,
+  "baseFontSizeAction": true,
+  "interfaceFontFamily": "Noto Sans JP",
+  "textFontFamily": "Noto Sans CJK JP,Noto Sans JP",
+  "monospaceFontFamily": "JetBrainsMono Nerd Font"
+}

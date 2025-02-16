@@ -1,0 +1,51 @@
+(defwindow h_status_bar2
+  :monitor {get_env("HYPRLUKA_MAIN_MONITOR")}
+  :stacking "fg"
+  :exclusive true
+  :geometry (geometry
+    :x 0 :y 0
+    :anchor "bottom center"
+    :width "100%"
+    :height "2.5%"
+  )
+
+  (centerbox
+    :style "margin: 0.275em 1em; padding: 0.275em 1em"
+    :orientation "h"
+
+    ; Left
+    (box
+      :halign "start"
+      :valign "center"
+      :space-evenly false
+      :spacing 8
+      (track_disk)
+      (track_ram)
+      (track_cpu)
+    )
+
+    ; Center
+    (box
+      :halign "center"
+      :valign "center"
+      :space-evenly false
+      :spacing 8
+      (date)
+      (clock_circle)
+      (clock)
+      (weather)
+    )
+
+    ; Right
+    (box
+      :halign "end"
+      :valign "center"
+      :space-evenly false
+      :spacing 8
+      (tray)
+      (update_notifier)
+      (notifications)
+      (base_apps)
+    )
+  )
+)

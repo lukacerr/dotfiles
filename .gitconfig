@@ -1,0 +1,31 @@
+[user]
+	name = Luka Cerrutti
+	email = lukacerrutti2002@gmail.com
+[core]
+	editor = nano
+[init]
+	defaultBranch = main
+[credential]
+	helper = store
+[cola]
+	autoloadcommittemplate = true
+	fontdiff = JetBrains Mono NL,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+	tabwidth = 4
+	blameviewer = code .
+	maxrecent = 10
+	refreshonfocus = true
+	resizebrowsercolumns = true
+	theme = default
+	icontheme = dark
+	hidpi = 0
+	boldheaders = true
+	statusindent = true
+	statusshowtotals = true
+	defaultrepo = /home/luka/Documents/losa/back
+	startupmode = folder
+	savewindowsettings = false
+[gui]
+	editor = alacritty -e nano .
+	historybrowser = git-dag
+[diff]
+	tool = code

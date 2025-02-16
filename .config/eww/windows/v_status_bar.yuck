@@ -1,0 +1,50 @@
+(defwindow v_status_bar
+  :monitor {get_env("HYPRLUKA_SEC_MONITOR")}
+  :stacking "fg"
+  :exclusive true
+  :geometry (geometry
+    :x 0 :y 0
+    :anchor "left center"
+    :width "2.5%"
+    :height "100%"
+  )
+
+  (centerbox
+    :style "margin: 1em 0.375em; padding: 1em 0.25em"
+    :orientation "v"
+
+    ; Top
+    (box
+      :orientation "v"
+      :valign "start"
+      :halign "center"
+      :space-evenly false
+      :spacing 8
+      (workspaces :info workspaces_info_sec :orientation "v")
+      (submap :nolabel true)
+      (active_media :nolabel true)
+    )
+
+    ; Center
+    (box
+      :orientation "v"
+      :valign "center"
+      :halign "center"
+      :space-evenly false
+      :spacing 8
+      (active_app :nolabel true :active_window active_window_general)
+    )
+
+    ; Bottom
+    (box
+      :orientation "v"
+      :valign "end"
+      :halign "center"
+      :space-evenly false
+      :spacing 8
+      (update_notifier :orientation "v")
+      (notifications)
+      (base_apps :orientation "v")
+    )
+  )
+)

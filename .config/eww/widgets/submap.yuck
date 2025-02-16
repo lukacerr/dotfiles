@@ -1,0 +1,14 @@
+(deflisten submap_info 
+  :initial "{}"
+  `scripts/hyprfollow s`
+)
+
+(defwidget submap [?nolabel]
+  (button
+    :class "bg-success dark bolder f-xs"
+    :visible {submap_info.title != 'null'}
+    :tooltip {nolabel == true ? submap_info.title : "Click to reset"}
+    :onclick "hyprctl dispatch submap reset"
+    {nolabel == true ? "" : "  ${submap_info.title}"}
+  )
+)

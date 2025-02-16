@@ -1,0 +1,223 @@
+{
+  "main": {
+    "id": "3e69d7c60b0d07cd",
+    "type": "split",
+    "children": [
+      {
+        "id": "e21d8b0615590e94",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "12556f773d898c65",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "私 ・ 月火水木金土日 ・ 週末.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "私 ・ 月火水木金土日 ・ 週末"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "28e5152a13b0aa8f",
+    "type": "split",
+    "children": [
+      {
+        "id": "57db8a961baf34cf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d85a67c702be348b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "c6836a2588dbb7ec",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "5a997dc7a1fdbb72",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 238.5,
+    "collapsed": true
+  },
+  "right": {
+    "id": "52d80241788435fa",
+    "type": "split",
+    "children": [
+      {
+        "id": "7b3f197d42e08f5f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d3787fe8e7597597",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "私 ・ 月火水木金土日 ・ 週末.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 私 ・ 月火水木金土日 ・ 週末"
+            }
+          },
+          {
+            "id": "6053046b65c16389",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "私 ・ 月火水木金土日 ・ 週末.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 私 ・ 月火水木金土日 ・ 週末"
+            }
+          },
+          {
+            "id": "3dad23b7e3fd4811",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "b8545c27adfbc843",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "私 ・ 月火水木金土日 ・ 週末.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 私 ・ 月火水木金土日 ・ 週末"
+            }
+          },
+          {
+            "id": "34dff0ba71e2cc9e",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "switcher:Open quick switcher": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "remotely-save:Remotely Save": false,
+      "obsidian-excalidraw-plugin:New drawing": false
+    }
+  },
+  "active": "12556f773d898c65",
+  "lastOpenFiles": [
+    "UADE/Teoría.md",
+    "私 ・ 月火水木金土日 ・ 週末.md",
+    "UADE/Regex a NFA.png",
+    "UADE/Turing an bn cn n.png",
+    "UADE/Verificación LL1.png",
+    "UADE/Follow LL.png",
+    "UADE/Gramática sencible ai bj ci dj.png",
+    "Finanzas.md",
+    "UADE/Gramáticas sensibles.png",
+    "UADE/Turing combinado.png",
+    "UADE/NFA a DFA.png",
+    "UADE/De gramática a NFA.png",
+    "UADE/Turing machine interpertation.png",
+    "_draws/Drawing 2025-02-13 15.27.41.excalidraw.md",
+    "_draws/Drawing 2025-02-13 15.21.25.excalidraw.md",
+    "_draws/Drawing 2025-02-12 22.07.41.excalidraw.md",
+    "_draws/Drawing 2025-02-11 20.01.59.excalidraw.md",
+    "_draws/Drawing 2025-02-12 22.56.49.excalidraw.md",
+    "UADE/Datos.md",
+    "Excalidraw/Drawing 2025-02-11 20.01.44.excalidraw.md",
+    "_draws",
+    "excalidraw.md",
+    "Drawing 2025-02-11 19.07.24.excalidraw.md",
+    "UADE/Cálculo 2 OBSOLETO.md",
+    "Untitled.md",
+    "Drawing 2025-02-11 19.05.43.excalidraw.md",
+    "}.md",
+    "UADE/Assets",
+    "UADE",
+    "General.md",
+    "Un Aplauso.md",
+    "Untitled",
+    "Untitled.canvas",
+    "db-data.tar.gz",
+    "_local/日本語 & 日亜学院/文法.md",
+    "_local/日本語 & 日亜学院/漢字.md",
+    "_local/Luka Cerrutti → Desarrollador web full-stack con TypeScript.md",
+    "_local/日本語 & 日亜学院",
+    "_local"
+  ]
+}

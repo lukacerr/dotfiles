@@ -1,0 +1,11 @@
+(defwidget base_apps [?orientation]
+  (box
+    :valign "end" :halign "fill" 
+    :spacing 6
+    :orientation {orientation ?: "h"}
+    (button :onclick "$HYPRLUKA_FILE_MANAGER &" :tooltip "Files" "")
+    (button :onclick "$HYPRLUKA_APP_LAUNCHER &" :tooltip "Launch apps" "󰀻")
+    (button :onclick "$HYPRLUKA_LOGOUT_MENU &" :tooltip "Manage session" "⏻")
+    (button :onclick "$HYPRLUKA_LOCK_SCREEN &" :tooltip "Lock" "󰌾")
+  )
+)

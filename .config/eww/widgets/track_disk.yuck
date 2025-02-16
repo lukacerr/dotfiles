@@ -1,0 +1,23 @@
+(defwidget track_disk []
+  (button
+    :onclick "$HYPRLUKA_TERMINAL -e sudo gdu / -i '/proc,/dev,/sys,/run,/.snapshots' -c --si &"
+    :tooltip "Free: ${round(EWW_DISK['/'].free / 1000000000, 2)} GB"
+    (box
+      :space-evenly false
+      :spacing 8
+      " "
+      (circular-progress
+        :class "info bg-dark"
+        :value {EWW_DISK['/'].used_perc}
+        :width 18
+        :start-at 75
+        :clockwise true
+        :thickness 2
+      )
+      (label
+        :class "f-xs bold"
+        :text "${round(EWW_DISK['/'].used / 1000000000, 2)}  ${round(EWW_DISK['/'].total / 1000000000, 2)} GB"
+      )
+    )
+  )
+)

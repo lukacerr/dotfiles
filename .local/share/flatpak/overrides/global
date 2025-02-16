@@ -1,0 +1,11 @@
+[Context]
+sockets=wayland
+filesystems=~/.icons;~/.themes
+
+[Environment]
+ELECTRON_FLAGS="--enable-features=UseOzonePlatform --ozone-platform=wayland --enable-wayland-ime"
+GTK_THEME=HyprLuka-Colloid
+ICON_THEME=HyprLuka-Papirus
+ELECTRON_OZONE_PLATFORM_HINT=auto
+CURSOR_THEME=Bibata-Modern-Ice
+CURSOR_SIZE=28

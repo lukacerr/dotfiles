@@ -1,0 +1,32 @@
+(defpoll weather_info
+  :interval "15m"
+  :initial '{ "icon": "❓", "data": {} }'
+  `scripts/weather_data.sh`
+)
+
+(defwidget weather []
+  (tooltip
+    (box
+      :orientation "v"
+      :spacing 6
+      {weather_info.data.weatherDesc?.[0]?.value ?: '-'}
+      "  ${weather_info.data.humidity ?: '??'}%"
+      "  ${weather_info?.data?.windspeedKmph ?: '?'} KM/H"
+    )
+    (eventbox
+      :timeout "5000ms" ; doesn't work :(
+      ; FIXME: eww poll to-be-integrated
+      :onclick "${EWW_CMD} update weather_info=\"$(scripts/weather_data.sh)\""
+      :cursor "pointer"
+      (box
+        :spacing 4
+        :class "bold"
+        (label
+          :class "pri"
+          :text {weather_info.icon}
+        )
+        "${weather_info?.data?.FeelsLikeC ?: '?'}°C"
+      )
+    )
+  )
+)

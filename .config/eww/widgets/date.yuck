@@ -1,0 +1,12 @@
+(defwidget date []
+  (tooltip
+    (calendar 
+      :show-heading false
+    )
+    (label
+      :halign "center"
+      :class "bold"
+      :text {formattime(EWW_TIME, '%m月%d日')}
+    )
+  )
+)

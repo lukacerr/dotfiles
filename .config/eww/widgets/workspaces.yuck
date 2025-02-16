@@ -1,0 +1,24 @@
+(deflisten workspaces_info_main 
+  :initial "[]" 
+  `scripts/hyprfollow w -m $HYPRLUKA_MAIN_MONITOR`
+)
+
+(deflisten workspaces_info_sec 
+  :initial "[]"
+  `scripts/hyprfollow w -m $HYPRLUKA_SEC_MONITOR`
+)
+
+(defwidget workspaces [info ?orientation]
+  (box
+    :spacing 6 
+    :orientation {orientation ?: "h"} 
+    (for workspace in {info} 
+      (button
+        :class "bold ${workspace.active ? 'bg-pri' : 'bg-dark'}"
+        :tooltip "${workspace.data.lastwindowtitle}"
+        :onclick "hyprctl -q dispatch workspace ${workspace.data.id}"
+        {workspace.data.name}
+      )
+    )
+  )
+)

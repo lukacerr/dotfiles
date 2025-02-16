@@ -1,0 +1,23 @@
+(defwidget track_ram []
+  (button
+    :onclick "$HYPRLUKA_TERMINAL -e btop &"
+    :tooltip "Free: ${round(EWW_RAM.free_mem / 1000000000, 2)} GB"
+    (box
+      :space-evenly false
+      :spacing 8
+      " "
+      (circular-progress
+        :class "warn bg-dark"
+        :value {EWW_RAM.used_mem_perc}
+        :width 18
+        :start-at 75
+        :clockwise true
+        :thickness 2
+      )
+      (label
+        :class "f-xs bold"
+        :text "${round(EWW_RAM.used_mem / 1000000000, 2)}  ${round(EWW_RAM.total_mem / 1000000000, 2)} GB"
+      )
+    )
+  )
+)

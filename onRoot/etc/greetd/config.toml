@@ -1,0 +1,14 @@
+[terminal]
+vt = 1
+
+[default_user]
+name = "luka"
+remember = true
+
+[default_session]
+command = "cage -m last gtkgreet"
+user = "luka"
+
+[initial_session]
+command = "Hyprland"
+user = "luka"

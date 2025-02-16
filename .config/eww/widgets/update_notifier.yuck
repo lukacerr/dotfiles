@@ -1,0 +1,23 @@
+(defpoll update_info
+  :interval "30m"
+  :initial '[{"tag":"No","icon":"󰚰","upCommand":"up","count":0}]'
+  `scripts/update_data.sh`
+)
+
+(defwidget update_notifier [?orientation]
+  (box
+    :spacing 6
+	:orientation {orientation ?: "h"}
+    (for data in {jq(update_info, "map(select(.count != 0))")}
+      (button
+        :timeout "120s"
+		; TODO: Update var after upCommand
+        :onclick "hyprctl dispatch exec '[float] $HYPRLUKA_TERMINAL -e fish -c \"${data.upCommand}\"'"
+        :onrightclick "${EWW_CMD} update update_info=\"$(scripts/update_data.sh)\""
+        :class "bolder f-xl ${data.count > 0 ? 'bg-success dark' : 'success'}"
+        :tooltip "${data.tag} updates available"
+        {data.count > 0 ? "${data.icon}  ${data.count}" : "${data.icon}"}
+      )
+    )
+  )
+)

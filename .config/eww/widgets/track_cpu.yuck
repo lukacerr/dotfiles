@@ -1,0 +1,31 @@
+(defwidget track_cpu []
+  (tooltip
+    (box
+      :orientation "v"
+      :spacing 6
+      (for x in {EWW_CPU.cores} 
+        "${x.core}: ${round(x.freq,2)}hz (${round(x.usage,2)}%)"
+      )
+    )
+    (button
+      :onclick "$HYPRLUKA_TERMINAL -e btop &"
+      (box
+        :space-evenly false
+        :spacing 8
+        " "
+        (circular-progress
+          :class "crit bg-dark"
+          :value {EWW_CPU.avg}
+          :width 18
+          :start-at 75
+          :clockwise true
+          :thickness 2
+        )
+        (label
+          :class "f-xs bold"
+          :text "${round(EWW_CPU.avg, 2)}%"
+        )
+      )
+    )
+  )
+)

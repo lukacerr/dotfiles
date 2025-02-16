@@ -1,0 +1,25 @@
+;(deflisten active_window_main
+;  :initial "{}"
+;  `scripts/hyprfollow aw -f -m $HYPRLUKA_MAIN_MONITOR`
+;)
+;
+;(deflisten active_window_sec
+;  :initial "{}"
+;  `scripts/hyprfollow aw -f -m $HYPRLUKA_SEC_MONITOR`
+;)
+
+(deflisten active_window_general
+  :initial "{}"
+  `scripts/hyprfollow aw`
+)
+
+(defwidget active_app [active_window ?nolabel]
+  (label
+    :class "buttonize bg-b-dark ${nolabel == true ? 'bolder' : 'f-s'}"
+    :tooltip "[${active_window.class}] ${active_window.title}"
+    :text {nolabel == true ? substring(active_window.class,0,2) ; FIXME: Iconize
+      : strlength(active_window.title) > 50  ? "${substring(active_window.title,0,50)}..."  : active_window.title}
+  )
+)
+
+; find /usr/share/icons $HOME/.local/share/icons $HOME/.icons -type f -name "obsidian*" 2>/dev/null | head -n 1

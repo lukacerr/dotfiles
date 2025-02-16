@@ -1,0 +1,185 @@
+* {
+	font-family: "Cantarell";
+	font-size: 9pt;
+	font-weight: 700;
+}
+
+#waybar {
+	background-color: rgba(22,22,22,0.75);
+}
+
+#waybar > * {
+	margin: 0 1em;
+}
+
+tooltip {
+	background: rgba(33, 33, 33, 0.95);
+	border-radius: 0.5em;
+  	border: 2px solid #FF75B5;
+}
+
+tooltip label {
+	padding: .5em;
+}
+
+label.module,
+box.module {
+	padding: 0.25em 1.5em;
+	margin: 0.5em;
+    border-radius: 0.5em;
+    background-color: rgba(22,22,22,0.78125);
+	/* border: 1px solid rgba(22,22,22,1); */
+}
+
+#cpu {
+	color: #FF2C6D;
+}
+
+#memory {
+	color: #FFCC95;
+}
+
+#disk {
+	color: #45A9F9;
+}
+
+#custom-media {
+	background-color: #19F9D8;
+	color: rgba(0,0,0,0.625);
+}
+
+#submap {
+	color: #19F9D8;
+}
+
+#window {
+	color: darkgrey;
+}
+
+#bluetooth {
+	color: #6FC1FF;
+
+}
+
+#network {
+  color: #FF9AC1;
+}
+
+#idle_inhibitor {
+	background-color: rgba(45,45,45,0.75);
+}
+
+#idle_inhibitor.activated {
+	background-color: rgba(210,210,210,0.75);
+	color: rgba(0,0,0,0.75);
+}
+
+#systemd-failed-units {
+	background-color: #FF2C6D;
+	color: rgba(0,0,0,0.75);
+	font-weight: 900;
+}
+
+#user {
+	background: transparent;
+}
+
+#user > * {
+	font-size: 8pt;
+	font-style: italic;
+}
+
+/* TODO: Workspaces */
+
+#workspaces button {
+}
+
+#workspaces button.focused {
+  background-color: transparent;
+}
+#workspace button.hover {
+  background-color: transparent;
+}
+#workspaces button.active {
+  color: #fff;
+}
+
+#workspaces button.urgent {
+  background-color: #eb4d4b;
+}
+
+/* ??? */
+@keyframes blink {
+  to {
+    background-color: rgba(30, 34, 42, 0.5);
+    color: #abb2bf;
+  }
+}
+
+/*
+#window,
+#workspaces {
+  border-radius: 20px;
+  padding: 0px 10px;
+  background-color: #1e1e1e;
+}
+
+#backlight {
+   color: #EBCB8B;
+  color: #8fbcbb;
+}
+
+#battery {
+  color: #c0caf5;
+   background-color: #90b1b1;
+}
+
+#battery.charging,
+#battery.full,
+#battery.plugged {
+  color: #26a65b;
+   background-color: #26a65b;
+}
+
+#battery.critical:not(.charging) {
+  color: #f53c3c;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#bluetooth.disconnected {
+  color: #f53c3c;
+}
+
+#network.disconnected {
+  color: #f53c3c;
+}
+
+#custom-media.custom-spotify {
+  background-color: #66cc99;
+}
+
+#custom-media.custom-vlc {
+  background-color: #ffa000;
+}
+
+#temperature {
+  background-color: #f0932b;
+}
+
+#temperature.critical {
+  background-color: #eb4d4b;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: #eb4d4b;
+}
+*/

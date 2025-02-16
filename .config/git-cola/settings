@@ -1,0 +1,213 @@
+{
+    "bookmarks": [
+        {
+            "path": "/home/luka/Documents/losa/back",
+            "name": "Losa0 Back"
+        },
+        {
+            "path": "/home/luka/Documents/losa/front",
+            "name": "Losa0 Front"
+        },
+        {
+            "path": "/home/luka/Documents/unaplauso/back",
+            "name": "Un Aplauso Back"
+        },
+        {
+            "path": "/home/luka",
+            "name": "Dotfiles"
+        },
+        {
+            "path": "/home/luka/Documents/hyprfollow",
+            "name": "HyprFollow"
+        }
+    ],
+    "gui_state": {
+        "messagebox": {
+            "width": 1536,
+            "height": 864,
+            "x": 0,
+            "y": 0
+        },
+        "preferencesview": {
+            "geometry": "AdnQywADAAAAAAHKAAAAAAAAB8kAAANfAAABygAAAAAAAAfJAAADXwAAAAACAAAAB4AAAAHKAAAAAAAAB8kAAANf",
+            "width": 1536,
+            "height": 864,
+            "x": 458,
+            "y": 0
+        },
+        "mainview": {
+            "geometry": "AdnQywADAAAAAAAAAAAAAAAABf8AAANf///5wAAAAAD///+/AAADXwAAAAACAAAAB4AAAAAAAAAAAAAABf8AAANf",
+            "width": 1536,
+            "height": 864,
+            "x": 0,
+            "y": 0,
+            "lock_layout": false,
+            "windowstate": "AAAA/wAAAAL9AAAAAgAAAAIAAAYAAAABn/wBAAAABPsAAAAMAFIAZQBjAGUAbgB0AAAAAAAAAAEQAAAAoAD////8AAAAAAAAAMMAAADDAP////oAAAAAAgAAAAL7AAAAEgBGAGEAdgBvAHIAaQB0AGUAcwEAAAAA/////wAAAG4A////+wAAABQAUwB1AGIAbQBvAGQAdQBsAGUAcwAAAAAA/////wAAAGoA////+wAAABAAQgByAGEAbgBjAGgAZQBzAQAAAMYAAACcAAAAnAD////8AAABZQAABJsAAAECAP////wBAAAAAvwAAAFlAAAD1AAAAJkA/////AIAAAAC+wAAAAwAUwB0AGEAdAB1AHMBAAAAIAAAAPEAAABqAP////sAAAAMAEMAbwBtAG0AaQB0AQAAARQAAACrAAAAYQD////7AAAADgBBAGMAdABpAG8AbgBzAQAABTwAAADEAAAAZgD///8AAAADAAAGAAAAAZ78AQAAAAH8AAAAAAAABgAAAABqAP////wCAAAAAvsAAAAIAEQAaQBmAGYBAAABwgAAAMAAAABqAP////sAAAAOAEMAbwBuAHMAbwBsAGUBAAAChQAAANsAAAAgAP///wAABgAAAAAAAAAABAAAAAQAAAAIAAAACPwAAAAA",
+            "show_status_filter": false,
+            "toolbars": [],
+            "ref_sort": 0,
+            "show_diff_line_numbers": true,
+            "show_diff_filenames": false,
+            "image_diff_mode": 0,
+            "image_zoom_mode": 0,
+            "word_wrap": true
+        },
+        "startupdialog": {
+            "geometry": "AdnQywADAAAAAAAAAAAAAAAABf8AAANfAAAAAAAAAAAAAAX/AAADXwAAAAACAAAAB4AAAAAAAAAAAAAABf8AAANf",
+            "width": 1536,
+            "height": 864,
+            "x": 0,
+            "y": 0
+        },
+        "push": {
+            "geometry": "AdnQywADAAAAAAZAAAAAAAAAC6EAAALlAAAGQAAAAAAAAAuhAAAC5QAAAAEAAAAAB4AAAAZAAAAAAAAAC6EAAALl",
+            "width": 1378,
+            "height": 742,
+            "x": 1600,
+            "y": 0,
+            "close_on_completion": true,
+            "remote_messages": false,
+            "selected_remotes": {
+                "/home/luka/Documents/losa/back": [
+                    "origin"
+                ],
+                "/home/luka/dotfiles": [
+                    "origin"
+                ]
+            },
+            "last_updated": 1735956575.3669417,
+            "prompt": true,
+            "tags": false
+        },
+        "gitdag": {
+            "geometry": "AdnQywADAAAAAAZAAAAAAAAADb8AAAPXAAAGQQAAANgAAAhAAAADBAAAAAACAAAAB4AAAAZAAAAAAAAADb8AAAPX",
+            "width": 1920,
+            "height": 984,
+            "x": 1600,
+            "y": 0,
+            "lock_layout": false,
+            "windowstate": "AAAA/wAAAAL9AAAAAgAAAAAAAAeAAAADuvwCAAAAA/sAAAAGAEwAbwBnAQAAAB4AAAFZAAAAegD////7AAAACgBGAGkAbABlAHMBAAABegAAATwAAABpAP////sAAAAIAEQAaQBmAGYBAAACuQAAAR8AAABwAP///wAAAAEAAAHeAAADuvwCAAAAAfsAAAAKAEcAcgBhAHAAaAAAAAAeAAADugAAAGkA////AAAAAAAAA7oAAAAEAAAABAAAAAgAAAAI/AAAAAA=",
+            "count": 1000,
+            "log": {
+                "column_widths": [
+                    785,
+                    100,
+                    1014
+                ]
+            },
+            "word_wrap": true
+        },
+        "mainwindow": {
+            "geometry": "AdnQywADAAAAAAZAAAAAAAAAB+EAAAKMAAAGQAAAAAAAAAfhAAACjAAAAAAAAAAAB4AAAAZAAAAAAAAAB+EAAAKM",
+            "width": 418,
+            "height": 653,
+            "x": 1600,
+            "y": 0,
+            "lock_layout": false,
+            "windowstate": "AAAA/wAAAAD9AAAAAAAAAaIAAAJvAAAABAAAAAQAAAAIAAAACPwAAAAA"
+        },
+        "pull": {
+            "geometry": "AdnQywADAAAAAAZAAAAAAAAACc8AAAG8AAAGQAAAAAAAAAnPAAABvAAAAAEAAAAAB4AAAAZAAAAAAAAACc8AAAG8",
+            "width": 912,
+            "height": 445,
+            "x": 1600,
+            "y": 0,
+            "close_on_completion": true,
+            "remote_messages": false,
+            "selected_remotes": {
+                "/home/luka/dotfiles": [
+                    "origin"
+                ]
+            },
+            "last_updated": 0.0,
+            "ff_only": true,
+            "no_ff": false,
+            "rebase": false
+        },
+        "stashview": {
+            "geometry": "AdnQywADAAAAAAZAAAAAAAAACVUAAAG8AAAGQAAAAAAAAAlVAAABvAAAAAEAAAAAB4AAAAZAAAAAAAAACVUAAAG8",
+            "width": 790,
+            "height": 445,
+            "x": 1600,
+            "y": 0,
+            "keep_index": true,
+            "stash_index": false,
+            "sizes": [
+                259,
+                519
+            ]
+        },
+        "merge": {
+            "geometry": "AdnQywADAAAAAAZAAAAAAAAACUYAAAG8AAAGQAAAAAAAAAlGAAABvAAAAAEAAAAAB4AAAAZAAAAAAAAACUYAAAG8",
+            "width": 775,
+            "height": 445,
+            "x": 1600,
+            "y": 0,
+            "no-ff": false,
+            "sign": false,
+            "commit": true
+        },
+        "finder": {
+            "geometry": "AdnQywADAAAAAAZAAAAAAAAACQ8AAAG8AAAGQAAAAAAAAAkPAAABvAAAAAEAAAAAB4AAAAZAAAAAAAAACQ8AAAG8",
+            "width": 720,
+            "height": 445,
+            "x": 1600,
+            "y": 0
+        },
+        "grep": {
+            "geometry": "AdnQywADAAAAAAZAAAAAAAAACQ8AAAG8AAAGQAAAAAAAAAkPAAABvAAAAAEAAAAAB4AAAAZAAAAAAAAACQ8AAAG8",
+            "width": 720,
+            "height": 445,
+            "x": 1600,
+            "y": 0,
+            "sizes": [
+                182,
+                182
+            ]
+        },
+        "difftool": {
+            "geometry": "AdnQywADAAAAAAZAAAAAAAAACQ8AAAGjAAAGQAAAAAAAAAkPAAABowAAAAEAAAAAB4AAAAZAAAAAAAAACQ8AAAGj",
+            "width": 720,
+            "height": 420,
+            "x": 1600,
+            "y": 0
+        },
+        "recentfiles": {
+            "geometry": "AdnQywADAAAAAAAAAAAA2AAAAs8AAAKUAAAAAAAAANgAAALPAAAClAAAAAEAAAAAB4AAAAAAAAAA2AAAAs8AAAKU",
+            "width": 720,
+            "height": 445,
+            "x": 0,
+            "y": 216
+        },
+        "createtag": {
+            "geometry": "AdnQywADAAAAAAAAAAAA2AAAAs8AAAGpAAAAAAAAANgAAALPAAABqQAAAAEAAAAAB4AAAAAAAAAA2AAAAs8AAAGp",
+            "width": 720,
+            "height": 210,
+            "x": 0,
+            "y": 216
+        }
+    },
+    "recent": [
+        {
+            "name": "back",
+            "path": "/home/luka/Documents/losa/back"
+        },
+        {
+            "name": "back",
+            "path": "/home/luka/Documents/unaplauso/back"
+        },
+        {
+            "name": "front",
+            "path": "/home/luka/Documents/losa/front"
+        },
+        {
+            "name": "hyprfollow",
+            "path": "/home/luka/Documents/hyprfollow"
+        },
+        {
+            "name": "luka",
+            "path": "/home/luka"
+        }
+    ],
+    "copy_formats": []
+}

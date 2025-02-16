@@ -1,0 +1,55 @@
+*
+!*/
+!/.gitignore
+# Manually ignore folders with potential repos
+Documents
+.cargo
+.local/share/Trash
+
+# Include
+!onRoot/**
+!/grub
+!bin/**
+!.config/alacritty/**
+!.config/eww/**
+!.config/fish/**
+!.config/fcitx5/**
+!.config/fuzzel/**
+!.config/git-cola/**
+!.config/gtk-4.0/**
+!.config/hypr/**
+!.config/Kvantum/**
+!.config/mako/**
+!.config/swaync/**
+!.config/nano/**
+!.config/nwg-bar/**
+!.config/nwg-look/**
+!.config/qt6ct/**
+!.config/superfile/**
+!.config/Thunar/**
+!.config/waybar/**
+!.local/share/flatpak/overrides/**
+!.local/share/icons/**
+!.local/share/nwg-look/**
+!.fonts/**
+!.themes/**
+!.icons/**
+!.ssh/**
+!Pictures/**
+!Vault/.obsidian/**
+!.gitconfig
+!/LICENSE
+!/README.md
+!/force-push.sh
+!/run.sh
+
+# Ignore
+Vault/.obsidian/plugins/remotely-save/**
+
+# Ignoring cache & credentials
+debug
+*.save
+*.pem
+*.old
+*.env
+known_hosts

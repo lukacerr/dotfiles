@@ -1,0 +1,18 @@
+(deflisten volume_info
+  :initial '{ "value": "0%", "status": "off" }'
+  `scripts/volume_sub.sh`
+)
+
+(defwidget audio []
+  (eventbox
+    ;tooltip "xd" ; FIXME: show device description
+    :onscroll '[ "{}" = "up" ] && amixer -q sset Master 1%+ || amixer -q sset Master 1%-'
+    :cursor "pointer"
+    (button
+      :onclick "pavucontrol -t 3 &"
+      :onrightclick "amixer set Master ${volume_info.status == 'off' ? 'on' : 'off'} -q"
+      :class {volume_info.status == "off" ? "bold b-warn" : "bolder bg-warn"}
+      {volume_info.status == "off" ? " " : "    ${volume_info.value}"}
+    )
+  )
+)

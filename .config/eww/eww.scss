@@ -1,0 +1,186 @@
+$pri: #ff75b5;
+$b-pri: #ff9ac1;
+$sec: #b084eb;
+$b-sec: #bcaafe;
+$success: #19f9d8;
+$b-success: #19f9d8;
+$info: #45a9f9;
+$b-info: #6fc1ff;
+$warn: #ffb86c;
+$b-warn: #ffcc95;
+$crit: #ff2c6d;
+$b-crit: #ff2c6d;
+$dark: #242424;
+$b-dark: #757575;
+$light: #cdcdcd;
+$b-light: #e6e6e6;
+
+.f-xs {
+  font-size: smaller;
+}
+.f-s {
+  font-size: small;
+}
+.f-l {
+  font-size: large;
+}
+.f-xl {
+  font-size: larger;
+}
+.buttonize {
+  padding: 0.5em;
+  border-radius: 4px;
+}
+.bold {
+  font-weight: bold;
+}
+.bolder {
+  font-weight: bolder;
+}
+.lighter {
+  font-weight: lighter;
+}
+.pri {
+  color: $pri;
+}
+.bg-pri {
+  background-color: $pri;
+}
+.border-pri {
+  border: 1px solid $pri;
+}
+.b-pri {
+  color: $b-pri;
+}
+.bg-b-pri {
+  background-color: $b-pri;
+}
+.border-b-pri {
+  border: 1px solid $b-pri;
+}
+.sec {
+  color: $sec;
+}
+.bg-sec {
+  background-color: $sec;
+}
+.border-sec {
+  border: 1px solid $sec;
+}
+.b-sec {
+  color: $b-sec;
+}
+.bg-b-sec {
+  background-color: $b-sec;
+}
+.border-b-sec {
+  border: 1px solid $b-sec;
+}
+.success {
+  color: $success;
+}
+.bg-success {
+  background-color: $success;
+}
+.border-success {
+  border: 1px solid $success;
+}
+.b-success {
+  color: $b-success;
+}
+.bg-b-success {
+  background-color: $b-success;
+}
+.border-b-success {
+  border: 1px solid $b-success;
+}
+.info {
+  color: $info;
+}
+.bg-info {
+  background-color: $info;
+}
+.border-info {
+  border: 1px solid $info;
+}
+.b-info {
+  color: $b-info;
+}
+.bg-b-info {
+  background-color: $b-info;
+}
+.border-b-info {
+  border: 1px solid $b-info;
+}
+.warn {
+  color: $warn;
+}
+.bg-warn {
+  background-color: $warn;
+}
+.border-warn {
+  border: 1px solid $warn;
+}
+.b-warn {
+  color: $b-warn;
+}
+.bg-b-warn {
+  background-color: $b-warn;
+}
+.border-b-warn {
+  border: 1px solid $b-warn;
+}
+.crit {
+  color: $crit;
+}
+.bg-crit {
+  background-color: $crit;
+}
+.border-crit {
+  border: 1px solid $crit;
+}
+.b-crit {
+  color: $b-crit;
+}
+.bg-b-crit {
+  background-color: $b-crit;
+}
+.border-b-crit {
+  border: 1px solid $b-crit;
+}
+.light {
+  color: $light;
+}
+.bg-light {
+  background-color: $light;
+}
+.border-light {
+  border: 1px solid $light;
+}
+.b-light {
+  color: $b-light;
+}
+.bg-b-light {
+  background-color: $b-light;
+}
+.border-b-light {
+  border: 1px solid $b-light;
+}
+.dark {
+  color: $dark;
+}
+.bg-dark {
+  background-color: $dark;
+}
+.border-dark {
+  border: 1px solid $dark;
+}
+.b-dark {
+  color: $b-dark;
+}
+.bg-b-dark {
+  background-color: $b-dark;
+}
+.border-b-dark {
+  border: 1px solid $b-dark;
+}
