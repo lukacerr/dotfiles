@@ -1,0 +1,26 @@
+; GET TO KNOW YOUR DEVICES WITH upower -e OR upower -d for more details
+
+(deflisten mouse_data
+  :initial "{}"
+  `scripts/battery_sub.sh battery_hidpp_battery_0`
+)
+
+(deflisten keyboard_data
+  :initial "{}"
+  `scripts/battery_sub.sh battery_hid_dco2co26o32odeo0a_battery`
+)
+
+(deflisten earbuds_data
+  :initial "{}"
+  `scripts/battery_sub.sh /org/freedesktop/UPower/devices/headset_dev_80_99_E7_40_07_7B`
+)
+
+(defwidget battery [data ?onclick ?icon ?critical]
+  (button
+    :onclick onclick
+    :visible {data == "{}" ? false : data?.state != "unknown" && data.percentage != "0%"}
+    :tooltip {data?.state ?: "Unknown"}
+    :class {jq("\"" + data.percentage + "\"", "gsub(\"%\"; \"\") | tonumber <= 20") ? "bg-crit bolder" : "bold"}
+    " ${icon}  ${data.percentage}" 
+  )
+)

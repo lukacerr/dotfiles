@@ -1,0 +1,32 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+	{
+		"context": "Workspace",
+		"bindings": {
+			// "shift shift": "file_finder::Toggle"
+		}
+	},
+	{
+		"context": "Editor && vim_mode == insert && !menu",
+		"bindings": {
+			// "j k": "vim::SwitchToNormalMode"
+		}
+	},
+	{
+		"context": "Editor",
+		"bindings": {
+			"ctrl-q": "editor::ToggleCodeActions",
+			"ctrl-d": "editor::DeleteLine",
+			"ctrl-up": "editor::MoveToStartOfParagraph",
+			"ctrl-down": "editor::MoveToEndOfParagraph",
+			"ctrl-shift-up": "editor::SelectToStartOfParagraph",
+			"ctrl-shift-down": "editor::SelectToEndOfParagraph"
+		}
+	}
+]

@@ -1,0 +1,50 @@
+(defwindow h_status_bar
+  :monitor {get_env("HYPRLUKA_MAIN_MONITOR")}
+  :stacking "fg"
+  :exclusive true
+  :geometry (geometry
+    :x 0 :y 0
+    :anchor "top center"
+    :width "100%"
+    :height "4.375%"
+  )
+
+  (centerbox
+    :style "margin: 0.75em 1em"
+    :orientation "h"
+
+    ; Left
+    (box
+      :halign "start"
+      :valign "center"
+      :space-evenly false
+      :spacing 8
+      (workspaces :info workspaces_info_main)
+      (submap)
+      (active_media)
+    )
+
+    ; Center
+    (box
+      :halign "center"
+      :valign "center"
+      :space-evenly false
+      :spacing 8
+      (active_app :active_window active_window_general)
+    )
+
+    ; Right
+    (box
+      :halign "end"
+      :valign "center"
+      :space-evenly false
+      :spacing 8
+      (battery :data mouse_data :icon "" :onclick "piper &")
+      (battery :data keyboard_data :icon "󰌌" :onclick "fcitx5-config-qt &")
+      (battery :data earbuds_data :icon "󱡏")
+      (bluetooth)
+      (network)
+      (audio)
+    )
+  )
+)

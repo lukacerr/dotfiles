@@ -1,0 +1,32 @@
+(deflisten player_status
+  :initial ""
+  `playerctl -a -s -F status` ; "Paused" | "Playing" | ""
+)
+
+(deflisten player_data
+  :initial '{"title":"","url":"","artist":""}'
+  `playerctl -a -s -F metadata -f '{"title":"{{title}}","url":"{{url}}","artist":"{{artist}}"}'`
+)
+
+(defwidget active_media [?nolabel]
+  (button
+    :visible {player_status != ''}
+    :class "bolder f-xs ${player_status == 'Playing' ? 'bg-success dark' : 'success bg-dark'}"
+    :tooltip {nolabel == true && player_data != '' ? player_data.title : "Click to play/pause"}
+    :onclick "playerctl play-pause"
+    :onmiddleclick "playerctl previous"
+    :onrightclick "playerctl stop"
+    {nolabel == true 
+      ? player_status == 'Playing' ? '' : '' 
+      : player_data != '' && player_data.title != '' 
+        ? "${player_status == 'Playing' ? '' : ''}  ${
+          strlength('[${player_data.artist}] ${player_data?.title}') > 50
+            ? `${substring('[${player_data.artist}] ${player_data?.title}',0,50)}...`
+            : '[${player_data.artist}] ${player_data?.title}'
+        }"
+        : "${player_status == 'Playing' ? '' : ''}  Playing..."
+    }
+  )
+)
+
+

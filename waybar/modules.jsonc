@@ -1,0 +1,209 @@
+{
+	"bluetooth": {
+		"format": "  {status}",
+		"format-disabled": "",
+		"format-connected": "  {num_connections}",
+		"tooltip-format": "{controller_alias}\t{controller_address}",
+		"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+		"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+		"on-click": "blueman-manager"
+	},
+
+	"cpu": {
+		"format": "  {}%",
+		"on-click": "$TERMINAL -e btop"
+	},
+
+	"clock#time": {
+		"interval": 1,
+		"format": "󰥔  {:%H時%M分%S秒 (%Z)}",
+		"tooltip-format": "{tz_list}",
+		"timezones": ["America/Argentina/Buenos_Aires", "Etc/UTC"]
+	},
+
+	"clock#date": {
+		"interval": 30,
+		"format": "  {:%d日%m月%y年}",
+		"timezones": ["America/Argentina/Buenos_Aires", "Etc/UTC"],
+		"tooltip-format": "<span font_family='JetBrainsMonoNL Nerd Font Propo'>{calendar}</span>",
+		"calendar": {
+			"mode-mon-col": 3,
+			"weeks-pos": "right",
+			"format": {
+				"months": "<span color='#e5c76b'>{}</span>",
+				"weeks": "<span color='#6cbfbf'>{}</span>",
+				"weekdays": "<span color='#67b0e8'>{}</span>",
+				"days": "<span color='#dadada'>{}</span>",
+				"today": "<span color='#c47fd5'><u><b>{}</b></u></span>"
+			}
+		},
+		"actions": {
+			"on-click-right": "mode",
+			"on-scroll-up": "shift_up",
+			"on-scroll-down": "shift_down"
+		}
+	},
+
+	"disk": {
+		"interval": 120,
+		"unit": "GB",
+		"format": "󰨣  {specific_used:0.2f} GB",
+		"on-click": "$TERMINAL -e gdu"
+	},
+
+	"mpris": {
+		"format": "{status_icon}  {dynamic}",
+		"dynamic-len": 32,
+		"status-icons": {
+			"paused": "",
+			"playing": ""
+		}
+	},
+
+	"mpris#smaller": {
+		// "interval": 1,
+		"format": "{status_icon}  {position}",
+		"status-icons": {
+			"paused": "",
+			"playing": ""
+		}
+	},
+
+	"memory": {
+		"format": "  {used:0.2f}GB",
+		"on-click": "$TERMINAL -e btop"
+	},
+
+	"network": {
+		"format": "  {ifname}",
+		"format-disconnected": "",
+		"format-wifi": "{essid} ({signalStrength}%) ",
+		"format-ethernet": "  {ifname} /{cidr}",
+		"tooltip-format": "{ifname} via {gwaddr} 󰊗",
+		"tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+		"tooltip-format-ethernet": "  {ifname}"
+	},
+
+	"niri/workspaces": {
+		"format": "{value}"
+	},
+
+	"niri/window": {
+		"format": "{title}",
+		"icon": true,
+		"icon-size": 18,
+		"max-length": 32
+	},
+
+	"niri/window#smaller": {
+		"format": "{app_id}",
+		"icon": true,
+		"icon-size": 18,
+		"max-length": 16
+	},
+
+	"pulseaudio": {
+		"format": "{icon}  {volume}%",
+		"format-muted": "",
+		"format-icons": {
+			"headphone": "",
+			"hands-free": "󱡏",
+			"headset": "󱡏",
+			"phone": "",
+			"phone-muted": "",
+			"portable": "",
+			"car": "",
+			"default": ["", ""]
+		},
+		"on-click": "pavucontrol"
+	},
+
+	"tray": {
+		"icon-size": 21,
+		"spacing": 10
+	},
+
+	"upower#mouse": {
+		"native-path": "hidpp_battery_0",
+		"format": "󰍽  {percentage}",
+		"on-click": "piper &",
+		"tooltip": false,
+		"show-icon": false
+	},
+
+	"upower#keyboard": {
+		"native-path": "hid-dc:2c:26:32:de:0a-battery",
+		"format": "󰌌  {percentage}",
+		"on-click": "fcitx5-configtool &",
+		"tooltip": false,
+		"show-icon": false
+	},
+
+	"upower#earbuds": {
+		"native-path": "/org/bluez/hci0/dev_80_99_E7_40_07_7B",
+		"format": "󱡏  {percentage}",
+		"on-click": "fcitx5-configtool &",
+		"tooltip": false,
+		"show-icon": false
+	},
+
+	"wlr/taskbar": {
+		"format": "{icon}",
+		"icon-size": 16,
+		"icon-theme": "Tela-purple-dark",
+		"tooltip-format": "{title}",
+		"on-click": "activate",
+		"on-click-middle": "close"
+	},
+
+	"user": {
+		"format": "{user}"
+	},
+
+	"custom/notification": {
+		"escape": true,
+		"tooltip": false,
+		"return-type": "json",
+		"exec": "swaync-client -swb",
+		"on-click": "swaync-client -t -sw",
+		"on-click-middle": "swaync-client -d -sw",
+		"on-click-right": "swaync-client -C -sw",
+		"format": "{icon}  {text}",
+		"format-icons": {
+			"default": "󰂚",
+			"notification": "󱅫",
+			"dnd-notification": "󱏧",
+			"dnd-none": "󱏧"
+		}
+	},
+
+	"custom/docker": {
+		"tooltip": false,
+		"interval": 120,
+		"exec": "docker-compose ls -q",
+		"on-click": "$TERMINAL -e lazydocker",
+		"format": "  {}"
+	},
+
+	"custom/updates": {
+		"interval": 300,
+		"exec": "paru -Sy && paru -Qu",
+		"on-click": "$TERMINAL -e paru",
+		"format": "",
+		"tooltip-format": "Updates available"
+	},
+
+	"custom/ollama": {
+		"interval": 120,
+		"exec": "ollama ps",
+		"on-click": "dinitctl stop ollama",
+		"format": "",
+		"tooltip-format": "Ollama is running"
+	},
+
+	"custom/reboot": {
+		"format": "",
+		"tooltip-format": "Reboot",
+		"on-click": "sudo reboot"
+	}
+}

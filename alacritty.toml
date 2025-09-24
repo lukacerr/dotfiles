@@ -1,0 +1,74 @@
+# https://alacritty.org/config-alacritty.html
+
+[general]
+live_config_reload = false
+ipc_socket = false
+
+[window]
+padding = { x = 4, y = 4 }
+dynamic_padding = true
+# decorations = "None"
+opacity = 0.9
+
+[scrolling]
+multiplier = 10
+
+[font]
+normal = { family = "JetBrainsMonoNL Nerd Font Propo" }
+builtin_box_drawing = false
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.primary]
+foreground = "#dadada"
+background = "#141414"
+
+[colors.search]
+matches = { foreground = "#1c1c1c", background = "#8ccf7e" }
+focused_match = { foreground = "#1c1c1c", background = "#c47fd5" }
+
+[colors.hints]
+start = { foreground = "#1c1c1c", background = "#e5c76b" }
+end = { foreground = "#1c1c1c", background = "#e57474" }
+
+[colors.footer_bar]
+foreground = "#1c1c1c"
+background = "#dadada"
+
+[colors.selection]
+text = "#1c1c1c"
+background = "#c47fd5"
+
+[colors.normal]
+black = "#232323"
+red = "#e57474"
+green = "#8ccf7e"
+yellow = "#e5c76b"
+blue = "#67b0e8"
+magenta = "#c47fd5"
+cyan = "#6cbfbf"
+white = "#b6b7b7"
+
+[colors.bright]
+black = "#8a8a8a"
+red = "#e57474"
+green = "#8ccf7e"
+yellow = "#e5c76b"
+blue = "#67b0e8"
+magenta = "#c47fd5"
+cyan = "#6cbfbf"
+white = "#dadada"
+
+[selection]
+save_to_clipboard = true
+
+[[keyboard.bindings]]
+key = "F"
+mods = "Control"
+action = "SearchForward"
+
+[[keyboard.bindings]]
+key = "C"
+mods = "Alt"
+chars = "\nclear\n"

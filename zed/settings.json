@@ -1,0 +1,77 @@
+{
+	"edit_predictions": {
+		"mode": "eager",
+		"copilot": {
+			"proxy": null,
+			"proxy_no_verify": null,
+			"enterprise_uri": null
+		},
+		"enabled_in_text_threads": false
+	},
+	"features": {
+		"edit_prediction_provider": "zed"
+	},
+	"agent": {
+		"inline_assistant_model": {
+			"provider": "copilot_chat",
+			"model": "gpt-4.1"
+		},
+		"default_profile": "write",
+		"default_model": {
+			"provider": "copilot_chat",
+			"model": "gpt-4.1"
+		},
+		"always_allow_tool_actions": false
+	},
+	"icon_theme": "Base Charmed Icons",
+	"theme": {
+		"mode": "system",
+		"light": "Lukablush",
+		"dark": "Lukablush"
+	},
+	"ui_font_family": "Inter",
+	"buffer_font_weight": 300,
+	"buffer_font_family": "JetBrainsMonoNL Nerd Font Propo",
+	"tab_size": 2,
+	"hard_tabs": false,
+	"unstable.ui_density": "comfortable",
+	"languages": {
+		"JavaScript": { "formatter": { "language_server": { "name": "biome" } } },
+		"TypeScript": { "formatter": { "language_server": { "name": "biome" } } },
+		"TSX": { "formatter": { "language_server": { "name": "biome" } } },
+		"JSON": { "formatter": { "language_server": { "name": "biome" } } },
+		"JSONC": { "formatter": { "language_server": { "name": "biome" } } },
+		"CSS": { "formatter": { "language_server": { "name": "biome" } } },
+		"Python": {
+			"language_servers": ["basedpyright", "!pyright", "ruff"],
+			"formatter": [
+				{
+					"language_server": {
+						"name": "ruff"
+					}
+				}
+			]
+		}
+	},
+	"lsp": {
+		"basedpyright": {
+			"binary": {
+				"path": ".venv/bin/basedpyright-langserver",
+				"arguments": ["--stdio"]
+			},
+			"settings": {
+				"python": {
+					"pythonPath": ".venv/bin/python",
+					"venvPath": ".",
+					"venv": ".venv"
+				},
+				"basedpyright.analysis": {
+					"diagnosticMode": "workspace",
+					"inlayHints": {
+						"callArgumentNames": false
+					}
+				}
+			}
+		}
+	}
+}

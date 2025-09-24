@@ -1,0 +1,26 @@
+{
+	"positionX": "right",
+	"cssPriority": "user",
+	"control-center-margin-top": 14,
+	"control-center-margin-bottom": 14,
+	"control-center-margin-right": 24,
+	"control-center-margin-left": 24,
+	"timeout": 3,
+	"timeout-low": 3,
+	"notification-window-width": 384,
+	"hide-on-clear": true,
+	"fit-to-screen": false,
+	"control-center-height": 600,
+	"control-center-width": 384,
+	"widgets": ["title", "dnd", "inhibitors", "mpris", "volume", "notifications"],
+	"notification-visibility": {
+		"system-ui": {
+			"state": "ignored",
+			"summary": "System UI"
+		},
+		"vivaldi": {
+			"state": "ignored",
+			"app-name": "Vivaldi"
+		}
+	}
+}

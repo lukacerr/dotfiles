@@ -1,0 +1,53 @@
+[
+	{
+		"layer": "top",
+		"name": "bar-main-top",
+		"output": "DP-1",
+		"position": "top",
+		"spacing": 16,
+		"include": ["/home/luka/.config/waybar/modules.jsonc"],
+
+		"modules-left": [
+			"custom/updates",
+			"custom/docker",
+			"custom/ollama",
+			"niri/workspaces",
+			"wlr/taskbar",
+			"mpris"
+		],
+		"modules-center": ["niri/window"],
+		"modules-right": [
+			"clock#time",
+			"clock#date",
+			"network",
+			"bluetooth",
+			"pulseaudio",
+			"tray",
+			"custom/notification"
+		]
+	},
+	{
+		"layer": "top",
+		"name": "bar-secondary",
+		"output": "DP-3",
+		"spacing": 16,
+		"include": ["/home/luka/.config/waybar/modules.jsonc"],
+
+		"modules-left": [
+			"custom/reboot",
+			"niri/workspaces",
+			"wlr/taskbar",
+			"mpris#smaller"
+		],
+		"modules-center": ["niri/window#smaller"],
+		"modules-right": [
+			"upower#earbuds",
+			"upower#mouse",
+			"upower#keyboard",
+			"user",
+			"cpu",
+			"disk",
+			"memory"
+		]
+	}
+]

@@ -1,0 +1,79 @@
+* {
+	font-family: "Inter", "JetBrainsNL Mono Nerd Font Propo", system-ui;
+	border-radius: 12px;
+	color: #dadada;
+}
+
+.notification-row:focus,
+.notification-row:hover {
+	background: none;
+}
+
+.notification-row .notification-background {
+	padding: 0.5em 1em;
+}
+
+.close-button {
+	background: #e57474;
+	color: #dadada;
+	border-radius: 12px;
+	margin: 0.5em;
+}
+
+.notification-background .notification {
+	border: 2px solid #c47fd5;
+	background: #232323;
+	padding: 0;
+}
+
+.notification.critical {
+	border: 2px solid #e57474;
+}
+
+.notification-default-action .notification-content .text-box .summary {
+	color: #dadada;
+}
+
+.notification-default-action:hover,
+.notification-action:hover {
+	background: transparent;
+}
+
+.control-center {
+	padding: 0.225em 0.4em;
+	opacity: 0.95;
+	background: #1c1c1c;
+	border: 4px solid #c47fd5;
+}
+
+.widget-title > button {
+	font-weight: bolder;
+	color: #dadada;
+	background: #1c1c1c;
+}
+
+.widget-title > button:hover {
+	background: #c47fd5;
+}
+
+.widget-dnd > switch:checked {
+	background: #c47fd5;
+}
+
+.widget-volume,
+.widget-backlight {
+	background: #232323;
+}
+
+.widget-mpris {
+	padding: 0.25em 0.25em;
+	margin: 0 0.5em 0.5em 0.5em;
+}
+
+.widget-mpris-player {
+	border: 2px solid #c47fd5;
+}
+
+.widget-mpris > box > button:hover {
+	background: #c47fd5;
+}

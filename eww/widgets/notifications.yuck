@@ -1,0 +1,16 @@
+(deflisten notifications_info
+  :initial '{ "count": 0, "dnd": true, "visible": false, "inhibited": false }'
+  `swaync-client -s`
+)
+
+(defwidget notifications []
+  (button
+    :onclick "swaync-client -t -sw"
+    :onmiddleclick "swaync-client -C"
+    :onrightclick "swaync-client -d"
+    :class {notifications_info?.dnd || notifications_info?.count < 1  ? "pri" : "bg-pri"}
+    {notifications_info?.dnd 
+      ? "󰂛  ${notifications_info?.count ?: 0}" 
+      : "${notifications_info?.count > 0 ? '󱅫':''}  ${notifications_info?.count ?: 0}"}
+  )
+)

@@ -1,0 +1,8 @@
+(defwidget tray []
+  (systray
+    :class "buttonize bg-dark"
+    :halign "center"
+    :spacing 4
+    :icon-size 20
+  )
+)

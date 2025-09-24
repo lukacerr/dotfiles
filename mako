@@ -1,0 +1,20 @@
+max-history=50
+on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/message.oga
+font=Cantarell 12
+default-timeout=5000
+background-color=#202020FF
+text-color=#E6E6E6FF
+margin=15
+padding=12
+border-size=2
+border-color=#FF9AC1FF
+border-radius=4
+icon-path=$HOME/.icons/Papirus-Dark
+icon-location=right
+max-visible=10
+output=DP-1
+anchor=bottom-right
+
+[urgency=high]
+border-color=#FF2C6DFF
+default-timeout=0

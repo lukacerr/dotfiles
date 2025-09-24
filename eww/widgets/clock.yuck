@@ -1,0 +1,30 @@
+(defpoll curr_timestamp
+  :interval "60s"
+  :initial 0 
+  `date -d '-3 hours' +%s`
+)
+
+(defwidget clock []
+  (tooltip
+    (label
+      :class "bold"
+      :markup "󰥔  ${formattime(EWW_TIME, '%H時%M分%S秒', 'UTC')} <span font_size='x-small' color='grey'>(UTC)</span>"
+    )
+    (label
+      :class "bold"
+      :text {formattime(EWW_TIME, '%H時%M分%S秒')}
+    )
+  )
+)
+
+(defwidget clock_circle []
+  (circular-progress
+    :class "pri bg-b-dark"
+    :width 14
+    :thickness 4
+    :start-at 75
+    :clockwise true
+    ; FIXME: Timezone disrespected here, workaround on defpoll curr_timestamp
+    :value {((curr_timestamp % 86400) * 100) / 86400}
+  )
+)

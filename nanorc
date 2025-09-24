@@ -1,0 +1,36 @@
+include /usr/share/nano/*.nanorc
+include /usr/share/nano/extra/*.nanorc
+include /usr/share/nano/external/*.nanorc
+
+set tabsize 4
+set linenumbers
+set numbercolor grey,normal
+set scrollercolor grey,normal
+
+set indicator
+set smarthome
+set afterends
+set zap
+set atblanks
+set historylog
+set multibuffer
+# set mouse
+
+bind ^Q   exit          all
+bind ^Z   undo          main
+bind M-R  redo          main
+bind ^C   copy          main
+bind ^V   paste         main
+bind ^X   cut           main
+bind ^K   zap           main
+bind ^H   chopwordleft  all
+bind M-/  comment       main
+bind ^Space complete    main
+
+bind M-C  location      main
+bind ^E   wherewas      all
+bind M-E  findprevious  all
+bind ^R   replace       main
+bind ^_   gotoline      main
+bind ^G   firstline     all
+bind M-G  lastline      all
